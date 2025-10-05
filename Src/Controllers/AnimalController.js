@@ -1,4 +1,4 @@
-import Animal from "../Models/Animal.js"; // sobe um nível
+import { Animal } from "../Models/index.js";
 
 class AnimalController {
   static async criar(req, res) {

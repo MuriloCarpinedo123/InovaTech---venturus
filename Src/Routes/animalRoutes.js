@@ -1,8 +1,8 @@
 import express from "express";
-import AnimalController from "../Controllers/AnimalController.js"; // sobe um nível
+import AnimalController from "../Controllers/AnimalController.js";
 
 const router = express.Router();
 
-router.post("/animais", AnimalController.criar);
+router.post("/", AnimalController.criar);
 
 export default router;

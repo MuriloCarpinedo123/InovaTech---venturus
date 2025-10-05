@@ -4,6 +4,7 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "mysql3": "^0.7.4",
-    "sequelize": "^6.37.7"
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
   }
 }

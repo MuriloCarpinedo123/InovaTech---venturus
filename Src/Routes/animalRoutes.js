@@ -1,5 +1,5 @@
 import express from "express";
-import AnimalController from "./controllers/AnimalController.js";
+import AnimalController from "../Controllers/AnimalController.js"; // sobe um nível
 
 const router = express.Router();
 

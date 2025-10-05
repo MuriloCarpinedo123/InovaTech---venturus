@@ -1,8 +1,8 @@
-const express = require('express');
+import express from "express";
+import AnimalController from "./controllers/AnimalController.js";
+
 const router = express.Router();
-const AnimalController = require('../Controllers/AnimalController');
 
-// Rota para cadastrar animal
-router.post('/', AnimalController.cadastrarAnimal);
+router.post("/animais", AnimalController.criar);
 
-module.exports = router;
+export default router;

@@ -11,6 +11,10 @@ Projeto acadêmico do grupo InovaTech.
 
 👨‍💻 Lucas Mickael Silva Lima
 
+👥Turma
+
+💬2° DS AMS
+
 ⚙️ Como usar
 
 A API utiliza o padrão REST e responde em JSON.

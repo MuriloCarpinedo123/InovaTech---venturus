@@ -1,5 +1,6 @@
 import express from "express";
 import { sequelize } from "./Src/Models/index.js";
+
 import animalRoutes from "./Src/Routes/animalRoutes.js";
 import usuarioRoutes from "./Src/Routes/usuarioRoutes.js";
 import questionarioRoutes from "./Src/Routes/questionarioRoutes.js";

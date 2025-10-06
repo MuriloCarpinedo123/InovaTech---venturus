@@ -8,18 +8,16 @@ export const sequelize = new Sequelize({
   storage: "./database.sqlite"
 });
 
+// Inicializa os modelos
 export const Animal = animalModel(sequelize);
 export const Usuario = usuarioModel(sequelize);
 export const Questionario = questionarioModel(sequelize);
 
-Usuario.hasOne(Questionario, {
-  foreignKey: "usuarioId",
-  onDelete: "CASCADE",
-});
-Questionario.belongsTo(Usuario, {
-  foreignKey: "usuarioId",
-});
+// Associações
+Usuario.hasOne(Questionario, { foreignKey: "usuarioId", onDelete: "CASCADE" });
+Questionario.belongsTo(Usuario, { foreignKey: "usuarioId" });
 
+// Sincroniza banco
 sequelize
   .sync()
   .then(() => console.log("Banco sincronizado com sucesso"))

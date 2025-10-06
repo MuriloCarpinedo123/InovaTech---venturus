@@ -1,38 +1,35 @@
-# 🐾 InovaTech - Sistema de Adoção
+🐾 InovaTech - Sistema de Adoção
 
-Sistema RESTful desenvolvido para gerenciar o cadastro de **tutores**, **animais** e **questionários de adoção**.  
-Projeto acadêmico do grupo **InovaTech**.
+Sistema RESTful desenvolvido para gerenciar o cadastro de tutores, animais e questionários de adoção.
+Projeto acadêmico do grupo InovaTech.
 
----
+👥 Integrantes
 
-## 👥 Integrantes
+🧑‍💻 Murilo Duarte Carpinedo
 
-- 🧑‍💻 **Murilo Duarte Carpinedo**  
-- 👨‍💻 **João Miguel dos Santos Silva**  
-- 👨‍💻 **Lucas Mickael Silva Lima**
+👨‍💻 João Miguel dos Santos Silva
 
----
+👨‍💻 Lucas Mickael Silva Lima
 
-## ⚙️ Como usar
+⚙️ Como usar
 
-A API utiliza o padrão **REST** e responde em **JSON**.  
-As rotas estão organizadas em três módulos principais:  
-**Animal**, **Usuário** e **Questionário**.
+A API utiliza o padrão REST e responde em JSON.
+As rotas estão organizadas em três módulos principais:
+Animal, Usuário e Questionário.
 
----
+🐶 Rotas de Animal
+🔹 POST /animal
 
-## 🐶 Rotas de Animal
-
-### 🔹 POST `/animal`
-
-**Descrição:**  
+Descrição:
 Cadastra um novo animal no sistema.
 
-📍 **Endpoint:**  
+📍 Endpoint:
+
 http://localhost:8080/animal
 
-📦 **Body (JSON):**
-```json
+
+📦 Body (JSON):
+
 {
   "nome": "",
   "especie": "",
@@ -42,8 +39,12 @@ http://localhost:8080/animal
   "descricao": "",
   "foto": ""
 }
+
+
 ✅ Resposta (201 – Created):
+
 Animal cadastrado com sucesso.
+
 🔹 GET /animal
 
 Descrição:
@@ -197,7 +198,7 @@ Cada tutor pode possuir apenas um questionário.
 http://localhost:8080/questionario
 
 
-📦 Body (JSON): (todos os campos são obrigatórios)
+📦 Body (JSON):
 
 {
   "usuarioId": "",
@@ -330,9 +331,7 @@ Entidade	Métodos disponíveis	Descrição
 🐶 Animal	POST, GET	Cadastra e lista animais
 👤 Usuário	POST, GET, GET/:id	Gerencia tutores cadastrados
 📋 Questionário	POST, GET, GET/:id	Gerencia questionários de adoção
-
-
-Agradecimento
+💬 Agradecimento
 🧠 Sobre a Experiência
 
 Em nome da equipe InovaTech, queremos expressar nossa sincera gratidão à Venturus pela oportunidade de participar deste projeto.

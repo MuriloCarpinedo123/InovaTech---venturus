@@ -1,23 +1,33 @@
-InovaTech - Sistema de Adoção
+🐾 InovaTech - Sistema de Adoção
 
-Integrantes:
---------------------------
-Murilo Duarte Carpinedo
-João Miguel dos Santos Silva
-Lucas Mickael Silva Lima
---------------------------
+Sistema RESTful desenvolvido para gerenciar o cadastro de tutores, animais e questionários de adoção.
+Projeto acadêmico do grupo InovaTech.
 
-Como usar:
+👥 Integrantes
 
-POST /animal
+🧑‍💻 Murilo Duarte Carpinedo
+
+👨‍💻 João Miguel dos Santos Silva
+
+👨‍💻 Lucas Mickael Silva Lima
+
+⚙️ Como usar
+
+A API utiliza o padrão REST e responde em JSON.
+As rotas estão organizadas em três módulos principais: Animal, Usuário e Questionário.
+
+🐶 Rotas de Animal
+🔹 POST /animal
+
 Descrição: Cadastra um novo animal no sistema.
 
-Endpoint:
+📍 Endpoint:
+
 http://localhost:8080/animal
 
 
+📦 Body (JSON):
 
-Body (JSON):
 {
   "nome": "",
   "especie": "",
@@ -29,47 +39,50 @@ Body (JSON):
 }
 
 
-Resposta (201 – Created):
+✅ Resposta (201 – Created):
 Animal cadastrado com sucesso.
 
-GET /animal
-Descrição: Lista todos os animais cadastrados.
+🔹 GET /animal
 
-Endpoint:
+Descrição: Lista todos os animais cadastrados.
+📍 Endpoint:
+
 http://localhost:8080/animal
 
 
-Resposta (200 – OK):
+✅ Resposta (200 – OK):
 Retorna todos os animais cadastrados no banco de dados.
 
-GET /animal com filtros
+🔹 GET /animal com filtros
+
 Descrição: Permite buscar animais cadastrados com base em filtros específicos, utilizando query parameters.
 
-Como usar:
-Adicione os parâmetros de filtragem após o endpoint, usando o símbolo de interrogação (?), seguido dos query 
-params desejados.
+📘 Como usar:
+Adicione os parâmetros após o endpoint, usando ? seguido dos query params desejados.
 
-Exemplo simples:
+📍 Exemplo simples:
+
 http://localhost:8080/animal?especie=cachorro
 
 
-Exemplo com múltiplos filtros:
+📍 Exemplo com múltiplos filtros:
+
 http://localhost:8080/animal?especie=gato&porte=pequeno&castrado=true
 
-Nesse formato, a aplicação interpreta os parâmetros enviados após o ? como filtros de busca (query parameters),
-permitindo retornar apenas os animais que correspondem aos critérios informados.
 
-POST /usuario
+💡 A aplicação interpreta os parâmetros após o ? como filtros, retornando apenas os animais correspondentes.
 
-Descrição:
-Cadastra um novo tutor (usuário) no sistema.
+👤 Rotas de Usuário (Tutor)
+🔹 POST /usuario
 
-Endpoint:
+Descrição: Cadastra um novo tutor no sistema.
+
+📍 Endpoint:
 
 http://localhost:8080/usuario
 
 
-Body (JSON):
+📦 Body (JSON):
 
 {
   "nome_completo": "",
@@ -84,31 +97,30 @@ Body (JSON):
 }
 
 
-Campos obrigatórios:
+📋 Campos obrigatórios:
 nome_completo, senha, email, cidade, estado, idade, telefone
 
-Resposta (201 – Created):
+✅ Resposta (201 – Created):
 Retorna os dados do tutor cadastrado.
 
-Erros possíveis:
+❌ Erros possíveis:
 
-400 – Campos obrigatórios não preenchidos.
+400 – Campos obrigatórios não preenchidos
 
-400 – Email já cadastrado.
+400 – Email já cadastrado
 
-500 – Erro interno ao cadastrar o tutor.
+500 – Erro interno ao cadastrar tutor
 
-GET /usuario
+🔹 GET /usuario
 
-Descrição:
-Lista todos os tutores cadastrados no sistema.
+Descrição: Lista todos os tutores cadastrados.
 
-Endpoint:
+📍 Endpoint:
 
 http://localhost:8080/usuario
 
 
-Resposta (200 – OK):
+✅ Resposta (200 – OK):
 
 {
   "total": 3,
@@ -122,33 +134,31 @@ Resposta (200 – OK):
       "idade": 25,
       "telefone": "11999999999",
       "instagram": "@exemplo",
-      "facebook": "Exemplo Silva",
-      "createdAt": "2025-10-06T13:00:00Z"
+      "facebook": "Exemplo Silva"
     }
   ]
 }
 
 
-Erros possíveis:
+❌ Erros possíveis:
 
-500 – Erro interno ao listar usuários.
+500 – Erro interno ao listar usuários
 
-GET /usuario/:id
+🔹 GET /usuario/:id
 
-Descrição:
-Busca um tutor específico pelo seu ID.
+Descrição: Busca um tutor específico pelo seu ID.
 
-Endpoint:
+📍 Endpoint:
 
 http://localhost:8080/usuario/{id}
 
 
-Exemplo:
+📘 Exemplo:
 
 http://localhost:8080/usuario/5d8f0e4c-93a3-4e6b-a65d-1c22ab99f6d2
 
 
-Resposta (200 – OK):
+✅ Resposta (200 – OK):
 
 {
   "id": "uuid",
@@ -157,31 +167,30 @@ Resposta (200 – OK):
   "cidade": "São Paulo",
   "estado": "SP",
   "idade": 25,
-  "telefone": "11999999999",
-  "instagram": "@exemplo",
-  "facebook": "Exemplo Silva",
-  "createdAt": "2025-10-06T13:00:00Z"
+  "telefone": "11999999999"
 }
 
 
-Erros possíveis:
+❌ Erros possíveis:
 
-404 – Usuário não encontrado.
+404 – Usuário não encontrado
 
-500 – Erro interno ao buscar o usuário.
+500 – Erro interno ao buscar usuário
 
-POST /questionario
+📋 Rotas de Questionário
+🔹 POST /questionario
 
 Descrição:
-Cadastra um novo questionário vinculado a um tutor (usuário) previamente cadastrado.
-Cada tutor pode ter apenas um questionário.
+Cadastra um novo questionário de adoção, vinculado a um tutor já cadastrado.
+Cada tutor pode possuir apenas um questionário.
 
-Endpoint:
+📍 Endpoint:
 
 http://localhost:8080/questionario
 
 
-Body (JSON):
+📦 Body (JSON):
+(todos os campos são obrigatórios)
 
 {
   "usuarioId": "",
@@ -229,42 +238,36 @@ Body (JSON):
 }
 
 
-Campos obrigatórios:
-Todos os campos listados acima são obrigatórios, incluindo o usuarioId (referência ao tutor cadastrado).
-
-Resposta (201 – Created):
+✅ Resposta (201 – Created):
 Retorna o questionário criado com sucesso.
 
-Erros possíveis:
+❌ Erros possíveis:
 
-400 – Usuário não encontrado.
+400 – Usuário não encontrado
 
-400 – Tutor já possui um questionário cadastrado.
+400 – Tutor já possui um questionário
 
-400 – Campo obrigatório ausente.
+400 – Campo obrigatório ausente
 
-500 – Erro interno ao cadastrar o questionário.
+500 – Erro interno ao cadastrar questionário
 
-GET /questionario
+🔹 GET /questionario
 
-Descrição:
-Lista todos os questionários cadastrados, incluindo as informações do tutor associado.
+Descrição: Lista todos os questionários cadastrados, incluindo o tutor vinculado.
 
-Endpoint:
+📍 Endpoint:
 
 http://localhost:8080/questionario
 
 
-Resposta (200 – OK):
+✅ Resposta (200 – OK):
 
 [
   {
     "id": "uuid",
     "usuarioId": "uuid",
-    "quantos_animais_possui": "2",
     "motivos_para_adotar": "Companhia",
     "residencia_tipo": "Casa",
-    "createdAt": "2025-10-06T13:00:00Z",
     "Usuario": {
       "id": "uuid",
       "nome_completo": "Murilo Duarte",
@@ -274,26 +277,25 @@ Resposta (200 – OK):
 ]
 
 
-Erros possíveis:
+❌ Erros possíveis:
 
-500 – Erro interno ao listar questionários.
+500 – Erro interno ao listar questionários
 
-GET /questionario/:id
+🔹 GET /questionario/:id
 
-Descrição:
-Busca um questionário específico pelo seu ID, retornando também os dados do tutor vinculado.
+Descrição: Busca um questionário específico pelo ID, retornando também o tutor vinculado.
 
-Endpoint:
+📍 Endpoint:
 
 http://localhost:8080/questionario/{id}
 
 
-Exemplo:
+📘 Exemplo:
 
 http://localhost:8080/questionario/3f6a9b12-9d4f-4f20-a55b-5c22ab99d611
 
 
-Resposta (200 – OK):
+✅ Resposta (200 – OK):
 
 {
   "id": "uuid",
@@ -308,8 +310,14 @@ Resposta (200 – OK):
 }
 
 
-Erros possíveis:
+❌ Erros possíveis:
 
-404 – Questionário não encontrado.
+404 – Questionário não encontrado
 
-500 – Erro interno ao buscar questionário.
+500 – Erro interno ao buscar questionário
+
+🧾 Resumo
+Entidade	Métodos disponíveis	Descrição
+🐶 Animal	POST, GET	Cadastra e lista animais
+👤 Usuário	POST, GET, GET/:id	Gerencia tutores cadastrados
+📋 Questionário	POST, GET, GET/:id	Gerencia questionários de adoção

@@ -331,7 +331,21 @@ Entidade	Métodos disponíveis	Descrição
 👤 Usuário	POST, GET, GET/:id	Gerencia tutores cadastrados
 📋 Questionário	POST, GET, GET/:id	Gerencia questionários de adoção
 
----
 
-Esse formato fica **lindo no GitHub**, com divisões visuais claras, blocos de código bem destacados e hierarquia de títulos correta (`#`, `##`, `###`).  
-Quer que eu adicione também um **título final com créditos e agradecimento da equipe InovaTech**, tipo “💜 Agradecimentos”? Isso dá um toque profissional e humano no final.
+Agradecimento
+🧠 Sobre a Experiência
+
+Em nome da equipe InovaTech, queremos expressar nossa sincera gratidão à Venturus pela oportunidade de participar deste projeto.
+Essa experiência foi extremamente valiosa — aprendemos muito, evoluímos como equipe e tivemos a chance de aplicar nossos conhecimentos em um desafio real.
+
+🙏 Nossas Desculpas
+
+Pedimos desculpas por não termos conseguido finalizar o projeto com todos os requisitos planejados.
+Apesar disso, nos dedicamos ao máximo e valorizamos cada etapa do processo, que nos trouxe aprendizados técnicos e pessoais.
+
+💙 Nosso Agradecimento
+
+Agradecemos de coração pela confiança, pelo apoio e pela oportunidade de fazer parte dessa jornada.
+
+Com gratidão,
+Equipe InovaTech

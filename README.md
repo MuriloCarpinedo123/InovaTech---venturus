@@ -1,33 +1,38 @@
-🐾 InovaTech - Sistema de Adoção
+# 🐾 InovaTech - Sistema de Adoção
 
-Sistema RESTful desenvolvido para gerenciar o cadastro de tutores, animais e questionários de adoção.
-Projeto acadêmico do grupo InovaTech.
+Sistema RESTful desenvolvido para gerenciar o cadastro de **tutores**, **animais** e **questionários de adoção**.  
+Projeto acadêmico do grupo **InovaTech**.
 
-👥 Integrantes
+---
 
-🧑‍💻 Murilo Duarte Carpinedo
+## 👥 Integrantes
 
-👨‍💻 João Miguel dos Santos Silva
+- 🧑‍💻 **Murilo Duarte Carpinedo**  
+- 👨‍💻 **João Miguel dos Santos Silva**  
+- 👨‍💻 **Lucas Mickael Silva Lima**
 
-👨‍💻 Lucas Mickael Silva Lima
+---
 
-⚙️ Como usar
+## ⚙️ Como usar
 
-A API utiliza o padrão REST e responde em JSON.
-As rotas estão organizadas em três módulos principais: Animal, Usuário e Questionário.
+A API utiliza o padrão **REST** e responde em **JSON**.  
+As rotas estão organizadas em três módulos principais:  
+**Animal**, **Usuário** e **Questionário**.
 
-🐶 Rotas de Animal
-🔹 POST /animal
+---
 
-Descrição: Cadastra um novo animal no sistema.
+## 🐶 Rotas de Animal
 
-📍 Endpoint:
+### 🔹 POST `/animal`
 
+**Descrição:**  
+Cadastra um novo animal no sistema.
+
+📍 **Endpoint:**  
 http://localhost:8080/animal
 
-
-📦 Body (JSON):
-
+📦 **Body (JSON):**
+```json
 {
   "nome": "",
   "especie": "",
@@ -37,14 +42,13 @@ http://localhost:8080/animal
   "descricao": "",
   "foto": ""
 }
-
-
 ✅ Resposta (201 – Created):
 Animal cadastrado com sucesso.
-
 🔹 GET /animal
 
-Descrição: Lista todos os animais cadastrados.
+Descrição:
+Lista todos os animais cadastrados.
+
 📍 Endpoint:
 
 http://localhost:8080/animal
@@ -55,7 +59,8 @@ Retorna todos os animais cadastrados no banco de dados.
 
 🔹 GET /animal com filtros
 
-Descrição: Permite buscar animais cadastrados com base em filtros específicos, utilizando query parameters.
+Descrição:
+Permite buscar animais cadastrados com base em filtros específicos, utilizando query parameters.
 
 📘 Como usar:
 Adicione os parâmetros após o endpoint, usando ? seguido dos query params desejados.
@@ -75,7 +80,8 @@ http://localhost:8080/animal?especie=gato&porte=pequeno&castrado=true
 👤 Rotas de Usuário (Tutor)
 🔹 POST /usuario
 
-Descrição: Cadastra um novo tutor no sistema.
+Descrição:
+Cadastra um novo tutor no sistema.
 
 📍 Endpoint:
 
@@ -113,7 +119,8 @@ Retorna os dados do tutor cadastrado.
 
 🔹 GET /usuario
 
-Descrição: Lista todos os tutores cadastrados.
+Descrição:
+Lista todos os tutores cadastrados.
 
 📍 Endpoint:
 
@@ -146,7 +153,8 @@ http://localhost:8080/usuario
 
 🔹 GET /usuario/:id
 
-Descrição: Busca um tutor específico pelo seu ID.
+Descrição:
+Busca um tutor específico pelo seu ID.
 
 📍 Endpoint:
 
@@ -189,8 +197,7 @@ Cada tutor pode possuir apenas um questionário.
 http://localhost:8080/questionario
 
 
-📦 Body (JSON):
-(todos os campos são obrigatórios)
+📦 Body (JSON): (todos os campos são obrigatórios)
 
 {
   "usuarioId": "",
@@ -253,7 +260,8 @@ Retorna o questionário criado com sucesso.
 
 🔹 GET /questionario
 
-Descrição: Lista todos os questionários cadastrados, incluindo o tutor vinculado.
+Descrição:
+Lista todos os questionários cadastrados, incluindo o tutor vinculado.
 
 📍 Endpoint:
 
@@ -283,7 +291,8 @@ http://localhost:8080/questionario
 
 🔹 GET /questionario/:id
 
-Descrição: Busca um questionário específico pelo ID, retornando também o tutor vinculado.
+Descrição:
+Busca um questionário específico pelo ID, retornando também o tutor vinculado.
 
 📍 Endpoint:
 
@@ -321,3 +330,8 @@ Entidade	Métodos disponíveis	Descrição
 🐶 Animal	POST, GET	Cadastra e lista animais
 👤 Usuário	POST, GET, GET/:id	Gerencia tutores cadastrados
 📋 Questionário	POST, GET, GET/:id	Gerencia questionários de adoção
+
+---
+
+Esse formato fica **lindo no GitHub**, com divisões visuais claras, blocos de código bem destacados e hierarquia de títulos correta (`#`, `##`, `###`).  
+Quer que eu adicione também um **título final com créditos e agradecimento da equipe InovaTech**, tipo “💜 Agradecimentos”? Isso dá um toque profissional e humano no final.
